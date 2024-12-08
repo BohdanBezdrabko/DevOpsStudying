@@ -1,9 +1,9 @@
 #ifndef FUNC_A_H
 #define FUNC_A_H
 
-class FuncA {
+class Function {
 public:
-    int calculate() const;
+    double FuncA(double x, int n);
 };
 
 #endif
