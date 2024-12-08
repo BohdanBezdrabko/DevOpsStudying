@@ -2,7 +2,7 @@
 #include "FuncA.h"
 
 int main() {
-    FuncA obj;
-    std::cout << "FuncA calculation result: " << obj.calculate() << std::endl;
+    Function obj;
+    std::cout << "FuncA calculation result: " << obj.FuncA(double x) << std::endl;
     return 0;
 }
