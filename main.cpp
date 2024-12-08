@@ -3,6 +3,7 @@
 
 int main() {
     Function obj;
-    std::cout << "FuncA calculation result: " << obj.FuncA(double x) << std::endl;
+    std::cout << "FuncA calculation result: " << obj.FuncA(0.1, 3) << std::endl;
+    std::cout << "FuncA calculation result: " << obj.FuncA(0.1, 7) << std::endl;
     return 0;
 }
