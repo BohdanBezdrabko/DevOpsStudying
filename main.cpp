@@ -4,7 +4,7 @@
 int main() {
     Function obj;
 
-    // Перевірка результатів
+    // check all results
     double x = 0.1;
     int n1 = 3, n2 = 7;
 
