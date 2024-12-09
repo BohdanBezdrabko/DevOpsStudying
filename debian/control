@@ -1,0 +1,11 @@
+Source: function
+Section: math
+Priority: optional
+Maintainer: BohdanBezdrabko <bozbogdan05@ukr.net>
+Build-Depends: debhelper-compat (= 12), autotools-dev
+
+Package: function
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: calculator for function
+ A program that calculates trigonometric function for my variant
