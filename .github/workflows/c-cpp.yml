@@ -21,21 +21,16 @@ jobs:
       - name: Generate configure script
         run: |
           autoreconf --install
-        
+
       - name: Configure
         run: ./configure
 
-
       - name: Build Debian package
         run: |
-          dpkg-buildpackage -us -uc   
-      
+          dpkg-buildpackage -us -uc
 
-      - name: Build 
+      - name: Build
         run: make
-
-      - name: Create distribution
-        run: make dist
 
       - name: Upload Debian package
         uses: actions/upload-artifact@v4
