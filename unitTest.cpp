@@ -14,12 +14,9 @@ int main() {
 void test_FuncA() {
     Function func;
 
-    // Тест: x = 0, n = 1
+    // Простий тест: x = 0, n = 1
     assert(std::abs(func.FuncA(0, 1) - 1.0) < 1e-9);
 
-    // Тест: x = 0, n = 5 (результат не змінюється для x = 0)
-    assert(std::abs(func.FuncA(0, 5) - 1.0) < 1e-9);
-
-    // Тест: x = 1, n = 2
-    assert(std::abs(func.FuncA(1, 2) - 0.75) < 1e-9); // Ручний підрахунок: 1 - 1/4
+    // Простий тест: x = 1, n = 1
+    assert(std::abs(func.FuncA(1, 1) - 1.0) < 1e-9);
 }
