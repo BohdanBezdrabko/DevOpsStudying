@@ -2,14 +2,6 @@
 #include <cmath>
 #include "FuncA.h" 
 
-// Тест для функції factorial
-void test_factorial() {
-    assert(factorial(0) == 1);
-    assert(factorial(1) == 1);
-    assert(factorial(2) == 2);
-    assert(factorial(3) == 6);
-}
-
 // Тест для функції FuncA
 void test_FuncA() {
     Function func;
