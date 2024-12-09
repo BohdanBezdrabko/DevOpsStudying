@@ -3,7 +3,13 @@
 
 int main() {
     Function obj;
-    std::cout << "FuncA calculation result: " << obj.FuncA(0.1, 3) << std::endl;
-    std::cout << "FuncA calculation result: " << obj.FuncA(0.1, 7) << std::endl;
+
+    // Перевірка результатів
+    double x = 0.1;
+    int n1 = 3, n2 = 7;
+
+    std::cout << "FuncA calculation result (x = " << x << ", n = " << n1 << "): " << obj.FuncA(x, n1) << std::endl;
+    std::cout << "FuncA calculation result (x = " << x << ", n = " << n2 << "): " << obj.FuncA(x, n2) << std::endl;
+
     return 0;
 }

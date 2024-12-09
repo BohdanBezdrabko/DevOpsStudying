@@ -3,8 +3,7 @@
 
 class Function {
 public:
-
-    double FuncA(double x, int n);
+    double FuncA(double x, int n); // Змінено тип повернення на double
 };
 
 #endif
