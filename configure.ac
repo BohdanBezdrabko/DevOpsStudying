@@ -1,4 +1,4 @@
-AC_INIT([function], [1.0], [contik2005@gmail.com])
+AC_INIT([Function], [1.0], [bozbogdan05@ukr.net])
 AM_INIT_AUTOMAKE
 AC_PROG_CC
 AC_PROG_CXX
