@@ -36,4 +36,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: function-deb
-          path: /home/Desktop/DevOpsStudying/function_*.deb
+          path: C:\Users\Win-64\Desktop\DevOpsStudying
