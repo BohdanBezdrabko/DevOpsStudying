@@ -2,9 +2,9 @@ name: C/C++ CI
 
 on:
   push:
-    branches: [branchAutoTest]
+    branches: [branchHTTPserver]
   pull_request:
-    branches: [branchAutoTest]
+    branches: [branchHTTPserver]
 
 jobs:
   build:
@@ -36,3 +36,4 @@ jobs:
         with:
           name: test-results
           path: test-results.log
+
