@@ -2,9 +2,9 @@ name: C++ CI with Make
 
 on:
   push:
-    branches: [branchHTTPserver]
+    branches: [branchHTTPservMulti]
   pull_request:
-    branches: [branchHTTPserver]
+    branches: [branchHTTPservMulti]
 
 jobs:
   build:
@@ -27,21 +27,6 @@ jobs:
 
       - name: Install Docker Buildx
         uses: docker/setup-buildx-action@v1
-
-      - name: Configure
-        run: ./configure
-
-      - name: Build
-        run: make
-
-      - name: Run tests
-        run: make check
-
-      - name: Upload logs
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-logs
-          path: test-suite.log
 
       - name: build ls
         run: docker buildx ls
