@@ -1,6 +1,6 @@
 FROM alpine
 WORKDIR /home/optima
-COPY ./funca .
+COPY ./function .
 RUN apk add libstdc++
 RUN apk add libc6-compat
-ENTRYPOINT ["./funca"]
+ENTRYPOINT ["./function"]

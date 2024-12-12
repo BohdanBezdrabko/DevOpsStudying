@@ -15,7 +15,8 @@
 #include <random>
 #include <chrono>
 #include <algorithm>
-
+#include <FuncA.h>
+#include <timeCalculator.h>
 #define PORT 8082
 
 
@@ -156,7 +157,7 @@ int CreateHTTPserver()
 			auto t2 = std::chrono::high_resolution_clock::now();
 			auto int_ms = std::chrono::duration_cast<std::chrono::milliseconds>(t2-t1);
 
-			int iMS = int_ms.count();
+			int iMS = timeCalculator();
 
 			char strTimeEllapsed[20];
 			sprintf(strTimeEllapsed, "%i", iMS);
