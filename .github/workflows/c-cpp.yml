@@ -17,11 +17,9 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y autoconf automake g++ libboost-test-dev
-
       - name: Generate configure script
         run: |
           autoreconf --install
-
       - name: QEMU install
         uses: docker/setup-qemu-action@v3
 
@@ -47,7 +45,10 @@ jobs:
         run: docker buildx ls
 
       - name: Log in to dockerhub
-        run: docker login -u ${{ vars.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+        env:
+          DOCKER_USERNAME: ${{ vars.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
 
       - name: Build Dockerfile image for amd64
         run: docker build --platform=linux/amd64 -t bohdanbezdrabko/httpserver:amd64 --push .
