@@ -496,7 +496,7 @@ top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = foreign
 test_func_a_SOURCES = unitTest.cpp FuncA.cpp FuncA.h timeCalculator.cpp timeCalculator.h HTTP_Server.cpp
 funca_SOURCES = main.cpp FuncA.cpp FuncA.h HTTP_Server.cpp timeCalculator.cpp timeCalculator.h 
-EXTRA_DIST = Makefile.am
+EXTRA_DIST = Makefile.am`
 all: all-am
 
 .SUFFIXES:

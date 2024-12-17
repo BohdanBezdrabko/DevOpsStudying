@@ -5,6 +5,8 @@ RUN apk add --no-cache build-base automake autoconf
 
 WORKDIR /home/optima
 
+RUN apk add libstdc++
+RUN apk add libc6-compat
 # Копіюємо всі файли проекту
 COPY . .
 

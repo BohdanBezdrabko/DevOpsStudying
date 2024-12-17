@@ -5,4 +5,4 @@ test_func_a_SOURCES = unitTest.cpp FuncA.cpp FuncA.h timeCalculator.cpp timeCalc
 
 TESTS = test_func_a
 funca_SOURCES = main.cpp FuncA.cpp FuncA.h HTTP_Server.cpp timeCalculator.cpp timeCalculator.h 
-EXTRA_DIST = Makefile.am
+EXTRA_DIST = Makefile.am`
