@@ -5,8 +5,6 @@ RUN apk add --no-cache build-base automake autoconf
 
 WORKDIR /home/optima
 
-RUN apk add libstdc++
-RUN apk add libc6-compat
 # Копіюємо всі файли проекту
 COPY . .
 
@@ -21,5 +19,12 @@ RUN make
 
 # Створюємо мінімальний образ для запуску
 FROM alpine:latest
+
+# Додаємо необхідні бібліотеки
+RUN apk add --no-cache libstdc++ libgcc
+
+# Копіюємо скомпільований бінарний файл
 COPY --from=build /home/optima/funca /usr/local/bin/funca
+
+# Встановлюємо точку входу
 ENTRYPOINT ["/usr/local/bin/funca"]
