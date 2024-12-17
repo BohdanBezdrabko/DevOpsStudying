@@ -142,12 +142,11 @@ int CreateHTTPserver()
 			// Mersenne Twister random engine
 			std::mt19937 mtre {123};
 			std::uniform_int_distribution<int> distr {0, 2000000};
-
-			for (int i=0; i<2000; i++) {
+			for (int i=0; i<2000000; i++) {
 				aValues.push_back(distr(mtre));
 			}
 
-			for (int i=0; i<50; i++)
+			for (int i=0; i<500; i++)
 			{
 				sort(begin(aValues), end(aValues));
 				reverse(begin(aValues), end(aValues));
